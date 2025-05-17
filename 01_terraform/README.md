@@ -11,7 +11,7 @@ __Time to execute__: 15 mins <br/>
 
 ## Description
  
-This proof shows how MongoDB Atlas, as a Database-as-a-Service (DBaaS), can use Terraform to automate the deployment and the configuration of Mongodb clusters.
+This workshop shows how MongoDB Atlas, as a Database-as-a-Service (DBaaS), can use Terraform to automate the deployment and the configuration of Mongodb clusters.
 This proof uses a [Terraform](www.terraform.io) to perform the database cluster automated provisioning and should take between 5 to 10 minutes to complete, depending on the underlying cloud provider and the size and complexity of the cluster.
  
 ---
@@ -23,9 +23,12 @@ Ensure the Terraform is installed, e.g.:
 ```
 brew install terraform
 ```
+Refer [tutorial](https://developer.hashicorp.com/terraform/install) to install terraform in different operating system.
+
 __2. Configure Atlas Environment__
-* Log-on to your [Atlas account](http://cloud.mongodb.com) (using the MongoDB SA preallocated Atlas credits system) and navigate to your SA project
-* As MongoDB Atlas clusters are created under a specific Atlas Organization and Project,  go to your __Account__ settings and in the [Organizations](https://cloud.mongodb.com/v2#/account/organizations) tab, ensure you have the Organization [created](https://docs.atlas.mongodb.com/tutorial/manage-organizations/#create-an-organization) to be used in this proof and then for this Organization, __create__ a new __Project__ (or re-use an existing Project) and make a record of the project name.
+* Register new Atlas account through this [registration page](https://www.mongodb.com/cloud/atlas/register)
+* Organization and project will be automatically created
+* As MongoDB Atlas clusters are created under a specific Atlas Organization and Project, go to your __Account__ settings and in the [Organizations](https://cloud.mongodb.com/v2#/account/organizations) tab, ensure you have the Organization [created](https://docs.atlas.mongodb.com/tutorial/manage-organizations/#create-an-organization) to be used in this proof and then for this Organization, __create__ a new __Project__ (or re-use an existing Project) and make a record of the project name.
 * Navigate to the project you are using and go to the API Keys tab on the [Access Manager](https://docs.atlas.mongodb.com/configure-api-access#manage-programmatic-access-to-a-project) page.  
 
 ![ACCESS MANAGER](img/1_access_manager.png "ACCESS MANAGER")
