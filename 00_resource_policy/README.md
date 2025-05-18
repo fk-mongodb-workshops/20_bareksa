@@ -32,16 +32,19 @@ forbid (principal,
    action == ResourcePolicy::Action::"cluster.modify", 
    resource) 
 when { 
-  context.cluster.cloudProviders.contains(ResourcePolicy::CloudProvider::"aws")
+  !(context.cluster.cloudProviders.contains(ResourcePolicy::CloudProvider::"aws"))
 };
 ```
 
-### ONLY_ALLOW_AWS_SG
+### ONLY_ALLOW_SG
 ```
 forbid (principal, 
    action == ResourcePolicy::Action::"cluster.modify", 
    resource) 
 when { 
-  context.cluster.regions.contains(ResourcePolicy::Region::"aws:ap-southeast-1")
+  !(context.cluster.regions.contains(ResourcePolicy::Region::"aws:ap-southeast-1"))
 };
 ```
+
+### ONLY_ALLOW_AWS_SG
+
