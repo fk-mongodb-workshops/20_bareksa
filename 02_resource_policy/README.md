@@ -45,6 +45,25 @@ when {
   !(context.cluster.regions.contains(ResourcePolicy::Region::"aws:ap-southeast-1"))
 };
 ```
+ 
+### Exercise
 
-### ONLY_ALLOW_AWS_SG
+1. Run terraform destroy
+2. Update terraform.tfvars to use region AP_SOUTHEAST_3
+3. Run terraform plan and apply once more time
+4. Error
 
+```
+Error: error creating advanced cluster: https://cloud.mongodb.com/api/atlas/v2/groups/68291b2387212e149cd3fc9b/clusters POST: HTTP 403 Forbidden (Error code: "ATLAS_RESOURCE_POLICIES_VIOLATION_NOT_AUTHORIZED")
+```
+
+5. Update terraform.tfvars to use GCP cloud provider and region SOUTHEASTERN_ASIA_PACIFIC
+6. Run terraform plan and apply once more time
+7. Error
+
+```
+Error: error creating advanced cluster: https://cloud.mongodb.com/api/atlas/v2/groups/68291b2387212e149cd3fc9b/clusters POST: HTTP 403 Forbidden (Error code: "ATLAS_RESOURCE_POLICIES_VIOLATION_NOT_AUTHORIZED")
+```
+
+8. Delete both policies
+9. Re-run plan and apply with the latest vars with GCP cloud provider and region SOUTHEASTERN_ASIA_PACIFIC
