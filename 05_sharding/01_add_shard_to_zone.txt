@@ -1,0 +1,2 @@
+sh.addShardToZone("atlas-jtq6qg-shard-0", "TIER1")
+sh.addShardToZone("atlas-jtq6qg-shard-1", "TIER2")

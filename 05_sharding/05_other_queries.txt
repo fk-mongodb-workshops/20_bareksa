@@ -1,0 +1,15 @@
+use trx
+
+// SHARD_MERGE
+db.trx_history.find().explain().queryPlanner.winningPlan
+
+// SINGLE_SHARD
+db.trx_history.find({
+ "tier": 11,
+ "transactionId": 92591181
+})
+
+db.trx_history.find({
+ "tier": 11,
+ "accountNo": "1111111"
+}).explain().queryPlanner.winningPlan   

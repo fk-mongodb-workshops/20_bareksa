@@ -1,0 +1,3 @@
+use config
+db.shards.find({ tags: "TIER1" })
+db.shards.find({ tags: "TIER2" })
