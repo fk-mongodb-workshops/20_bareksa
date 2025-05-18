@@ -15,3 +15,9 @@ __Time to execute__: 15 mins <br/>
 2. [Regex](./02_regex)
 3. [Search on shared node](./03_search_on_shared_node)
 4. [Search on dedicated node](./04_search_on_dedicated_node)
+
+
+## Dedicated readonly and analytics nodes
+ 
+5. [Readonly Nodes](./05_readonly_node)
+6. [Analytics Nodes](./06_analytics_node) 
