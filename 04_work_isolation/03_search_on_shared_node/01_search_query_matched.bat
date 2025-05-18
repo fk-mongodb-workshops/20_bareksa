@@ -1,0 +1,1 @@
+mongosh "mongodb+srv://testuser@prd.hixjx.mongodb.net/long_query" --file search_matched.js

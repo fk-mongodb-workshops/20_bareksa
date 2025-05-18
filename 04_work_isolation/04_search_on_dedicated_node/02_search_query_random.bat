@@ -1,0 +1,1 @@
+mongosh "mongodb+srv://testuser@migration.hixjx.mongodb.net/long_query" --file search_random.js

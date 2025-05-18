@@ -1,0 +1,1 @@
+mgeneratejs CustomerSingleView.json -n 1000000 | mongoimport --uri "mongodb+srv://testuser@prd.hixjx.mongodb.net/long_query" --collection customers --numInsertionWorkers=10
