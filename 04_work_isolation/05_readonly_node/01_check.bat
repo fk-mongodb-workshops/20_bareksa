@@ -1,0 +1,1 @@
+mongosh "mongodb+srv://testuser@prd.hixjx.mongodb.net/long_query?readPreference=secondary&readPreferenceTags=nodeType:READ_ONLY" --file check.js
