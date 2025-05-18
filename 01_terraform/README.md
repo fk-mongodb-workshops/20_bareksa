@@ -66,13 +66,13 @@ Terraform init
 __3. Validate the terraform__ 
 Execute the below command in the GitHub folder to check the plan.
 ```
-terraform plan
+terraform plan -out plan.output
 ```
 ![CREATE CLUSTER](img/3_create_cluster.png "CREATE CLUSTER")
 
 __4. Provision The Database Cluster Using terraform__
 ```
-terraform apply
+terraform apply "plan.output"
 ```
 Validate the list of actions to be performed by Terraform by entering “yes”. 
 
