@@ -6,10 +6,28 @@ db.trx_history.find().explain().queryPlanner.winningPlan
 // SINGLE_SHARD
 db.trx_history.find({
  "tier": 11,
- "transactionId": 92591181
+ "transactionId": 1
 })
 
 db.trx_history.find({
  "tier": 11,
+ "transactionId": 1
+}).explain().queryPlanner.winningPlan
+
+
+
+db.trx_history.find({
+ "tier": 11,
+ "accountNo": "1111111"
+})
+
+db.trx_history.find({
+ "tier": 11,
+ "accountNo": "1111111"
+}).explain().queryPlanner.winningPlan   
+
+
+
+db.trx_history.find({
  "accountNo": "1111111"
 }).explain().queryPlanner.winningPlan   

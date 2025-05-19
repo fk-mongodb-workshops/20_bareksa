@@ -22,16 +22,3 @@ db.trx_history.getShardDistribution()
 
 ---
 
-
-db.trx_history.updateOne({
- "transactionId": 92591181,
-}, {
-  $set: {
-    "tier": 11
-  }
-})
-
-
-db.trx_history.find({
- "tier": 92591181,
-}).explain().queryPlanner.winningPlan
