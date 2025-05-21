@@ -19,10 +19,10 @@ provider "mongodbatlas" {
 # Create a Dedicated Tier Cluster
 #
 resource "mongodbatlas_advanced_cluster" "pov-terraform" {
-  project_id             = var.atlasprojectid
-  name                   = "POV"
-  backup_enabled         = false
-  cluster_type           = "REPLICASET"
+  project_id     = var.atlasprojectid
+  name           = "POV"
+  backup_enabled = false
+  cluster_type   = "REPLICASET"
   replication_specs {
     region_configs {
       electable_specs {
@@ -33,6 +33,21 @@ resource "mongodbatlas_advanced_cluster" "pov-terraform" {
       priority              = 7
       region_name           = var.cluster_region
     }
+  }
+}
+
+#
+# Create an Atlas Admin Database User
+#
+resource "mongodbatlas_database_user" "my_user" {
+  username           = var.mongodb_atlas_database_username
+  password           = var.mongodb_atlas_database_user_password
+  project_id         = var.atlasprojectid
+  auth_database_name = "admin"
+
+  roles {
+    role_name     = "atlasAdmin"
+    database_name = "admin"
   }
 }
 
