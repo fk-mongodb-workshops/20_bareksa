@@ -1,2 +1,3 @@
-sh.addShardToZone("atlas-4p1eb4-shard-0", "TIER1")
-sh.addShardToZone("atlas-4p1eb4-shard-1", "TIER2")
+use admin
+sh.addShardToZone("atlas-wzj5um-shard-0", "TIER1")
+sh.addShardToZone("atlas-wzj5um-shard-1", "TIER2")
